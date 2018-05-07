@@ -1,6 +1,6 @@
 FROM node:alpine
 
-RUN apk add --no-cache make gcc g++ python git
+RUN apk add --no-cache make gcc g++ python git bash
 
 COPY . /src/ark-json-rpc
 
@@ -9,6 +9,6 @@ RUN cd /src/ark-json-rpc \
     && npm install
 
 WORKDIR /src/ark-json-rpc
-ENTRYPOINT ["pm2","./server.js"]
+ENTRYPOINT ["sh", "-c", "pm2 --no-daemon start ./bin/server -- start $@" ]
 
 EXPOSE 8080

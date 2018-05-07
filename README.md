@@ -49,7 +49,7 @@ $ docker build -t ark-json-rpc .
 You will need to run the container with the `--allow-remote` option to allow the host machine to access the container.
 
 ```bash
-$ docker run -d -p 8080:8080 ark-json-rpc --allow-remote
+$ docker run --name ark-json-rpc -d -p 8080:8080 ark-json-rpc -e "--allow-remote"
 ```
 
 ## Security

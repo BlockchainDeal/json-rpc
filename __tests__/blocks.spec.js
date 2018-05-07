@@ -17,10 +17,10 @@ describe('Blocks', () => {
     it('should get the block information', async () => {
       const response = await request('blocks.info', {
         network: 'mainnet',
-        id: '18017180930038348026'
+        id: '4366553906931540162'
       })
 
-      await expect(response.data.result.id).toBe('18017180930038348026')
+      await expect(response.data.result.id).toBe('4366553906931540162')
     })
   })
 
@@ -28,7 +28,7 @@ describe('Blocks', () => {
     it('should get the block transactions', async () => {
       const response = await request('blocks.transactions', {
         network: 'mainnet',
-        id: '18017180930038348026'
+        id: '4366553906931540162'
       })
 
       await expect(response.data.result.transactions).toHaveLength(50)

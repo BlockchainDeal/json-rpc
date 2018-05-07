@@ -38,8 +38,7 @@ describe('Accounts', () => {
       await expect(response.data.result.publicKey).toBe('03675c61dcc23eab75f9948c6510b54d34fced4a73d3c9f2132c76a29750e7a614')
     })
 
-    let bip38address
-    let bip38backup
+    let bip38wif
     let userId = require('crypto').randomBytes(32).toString('hex')
 
     it('should create an account on mainnet using bip38 encryption', async () => {
@@ -53,8 +52,7 @@ describe('Accounts', () => {
       await expect(response.data.result).toHaveProperty('publicKey')
       await expect(response.data.result).toHaveProperty('wif')
 
-      bip38address = response.data.result.address
-      bip38backup = response.data.result.wif
+      bip38wif = response.data.result.wif
     })
 
     it('should find bip38 backup from userId', async () => {
@@ -63,7 +61,7 @@ describe('Accounts', () => {
       })
 
       await expect(response.data.result).toHaveProperty('wif')
-      await expect(response.data.result.wif).toBe(bip38backup)
+      await expect(response.data.result.wif).toBe(bip38wif)
     })
 
     it('should create transaction from bip38 backup using userId', async () => {

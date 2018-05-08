@@ -1,8 +1,9 @@
 # ARK JSON-RPC
 
 <p align="center">
-    <img src="https://cdn-images-1.medium.com/max/2000/1*QFNTgOOP_9NIaNwIrBnp_w.png" />
+    <img src="https://cdn-images-1.medium.com/max/900/1*YbDqGZiIxoZmYr4GALrONQ.png" />
 </p>
+
 
 > A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the ARK blockchain.
 

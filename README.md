@@ -1,3 +1,5 @@
+**:warning: DEPRECATED IN FAVOR OF https://github.com/ArkEcosystem/core/tree/master/packages/core-json-rpc WHICH IS PART OF CORE V2 :warning:**
+
 # ARK JSON-RPC
 
 <p align="center">
